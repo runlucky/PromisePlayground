@@ -2,45 +2,36 @@ import struct Foundation.TimeInterval
 import Dispatch
 
 /**
-     after(seconds: 1.5).then {
-         //…
-     }
-
-- Returns: A guarantee that resolves after the specified duration.
+ - Returns: A new promise that fulfills after the specified duration.
 */
-public func after(seconds: TimeInterval) -> Guarantee<Void> {
-    let (rg, seal) = Guarantee<Void>.pending()
-    let when = DispatchTime.now() + seconds
-#if swift(>=4.0)
-    q.asyncAfter(deadline: when) { seal(()) }
-#else
-    q.asyncAfter(deadline: when, execute: seal)
-#endif
-    return rg
+@available(*, deprecated: 4.3, message: "Use after(seconds:)")
+public func after(interval: TimeInterval) -> Promise<Void> {
+    return after(seconds: interval)
 }
 
 /**
      after(.seconds(2)).then {
-         //…
      }
 
- - Returns: A guarantee that resolves after the specified duration.
+- Returns: A new promise that fulfills after the specified duration.
 */
-public func after(_ interval: DispatchTimeInterval) -> Guarantee<Void> {
-    let (rg, seal) = Guarantee<Void>.pending()
-    let when = DispatchTime.now() + interval
-#if swift(>=4.0)
-    q.asyncAfter(deadline: when) { seal(()) }
-#else
-    q.asyncAfter(deadline: when, execute: seal)
-#endif
-    return rg
+public func after(seconds: TimeInterval) -> Promise<Void> {
+    return Promise { fulfill, _ in
+        let when = DispatchTime.now() + seconds
+        DispatchQueue.global().asyncAfter(deadline: when) { fulfill(()) }
+    }
 }
 
-private var q: DispatchQueue {
-    if #available(macOS 10.10, iOS 8.0, tvOS 9.0, watchOS 2.0, *) {
-        return DispatchQueue.global(qos: .default)
-    } else {
-        return DispatchQueue.global(priority: .default)
+/**
+ - Returns: A new promise that fulfills after the specified duration.
+*/
+public func after(interval: DispatchTimeInterval) -> Promise<Void> {
+    return Promise { fulfill, _ in
+        let when = DispatchTime.now() + interval
+    #if swift(>=4.0)
+        DispatchQueue.global().asyncAfter(deadline: when) { fulfill(()) }
+    #else
+        DispatchQueue.global().asyncAfter(deadline: when, execute: fulfill)
+    #endif
     }
 }

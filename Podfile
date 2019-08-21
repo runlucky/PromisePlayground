@@ -6,6 +6,6 @@ target 'PromisePlayground' do
   use_frameworks!
 
   # Pods for PromisePlayground
-  pod 'PromiseKit'
+  pod 'PromiseKit/CorePromise', '~> 4.5'
 
 end

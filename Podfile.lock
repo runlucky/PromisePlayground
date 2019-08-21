@@ -1,24 +1,16 @@
 PODS:
-  - PromiseKit (6.10.0):
-    - PromiseKit/CorePromise (= 6.10.0)
-    - PromiseKit/Foundation (= 6.10.0)
-    - PromiseKit/UIKit (= 6.10.0)
-  - PromiseKit/CorePromise (6.10.0)
-  - PromiseKit/Foundation (6.10.0):
-    - PromiseKit/CorePromise
-  - PromiseKit/UIKit (6.10.0):
-    - PromiseKit/CorePromise
+  - PromiseKit/CorePromise (4.5.2)
 
 DEPENDENCIES:
-  - PromiseKit
+  - PromiseKit/CorePromise (~> 4.5)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - PromiseKit
 
 SPEC CHECKSUMS:
-  PromiseKit: 1fdaeb6c0a94a5114fcb814ff3d772b86886ad4e
+  PromiseKit: 743e497a5f505a470d3bbbf4ce0663c1268af0a4
 
-PODFILE CHECKSUM: a47272769874f8a278ea03447843adf2282ce9d9
+PODFILE CHECKSUM: 60ab56501aab41990f31571bfb61130ec2f913ec
 
 COCOAPODS: 1.7.2
