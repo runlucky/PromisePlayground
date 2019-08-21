@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		08B3D7F422F3C896006A719F /* PromisePlayground.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 08B3D7F222F3C896006A719F /* PromisePlayground.xcdatamodeld */; };
 		08B3D7F622F3C899006A719F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08B3D7F522F3C899006A719F /* Assets.xcassets */; };
 		08B3D7F922F3C899006A719F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08B3D7F722F3C899006A719F /* LaunchScreen.storyboard */; };
+		74FB946CA37CA4DD2BD0CBAE /* Pods_PromisePlayground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27640ED09F39D961E0C00F8 /* Pods_PromisePlayground.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		08B3D7F522F3C899006A719F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08B3D7F822F3C899006A719F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08B3D7FA22F3C899006A719F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59DD6EC01D6D2573424D4FC8 /* Pods-PromisePlayground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PromisePlayground.release.xcconfig"; path = "Target Support Files/Pods-PromisePlayground/Pods-PromisePlayground.release.xcconfig"; sourceTree = "<group>"; };
+		C27640ED09F39D961E0C00F8 /* Pods_PromisePlayground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PromisePlayground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8AC3CD54CE567A6419E5749 /* Pods-PromisePlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PromisePlayground.debug.xcconfig"; path = "Target Support Files/Pods-PromisePlayground/Pods-PromisePlayground.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74FB946CA37CA4DD2BD0CBAE /* Pods_PromisePlayground.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				08B3D7EA22F3C896006A719F /* PromisePlayground */,
 				08B3D7E922F3C896006A719F /* Products */,
+				B1275D2FD09776856E3EFA2F /* Pods */,
+				FC3F623077AA6AF0CC20281E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = PromisePlayground;
 			sourceTree = "<group>";
 		};
+		B1275D2FD09776856E3EFA2F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F8AC3CD54CE567A6419E5749 /* Pods-PromisePlayground.debug.xcconfig */,
+				59DD6EC01D6D2573424D4FC8 /* Pods-PromisePlayground.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FC3F623077AA6AF0CC20281E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C27640ED09F39D961E0C00F8 /* Pods_PromisePlayground.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 08B3D7FD22F3C899006A719F /* Build configuration list for PBXNativeTarget "PromisePlayground" */;
 			buildPhases = (
+				35A37E220BAF3A2272BA6F1C /* [CP] Check Pods Manifest.lock */,
 				08B3D7E422F3C896006A719F /* Sources */,
 				08B3D7E522F3C896006A719F /* Frameworks */,
 				08B3D7E622F3C896006A719F /* Resources */,
+				2D6133313A15229C5FBC5A01 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D6133313A15229C5FBC5A01 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PromisePlayground/Pods-PromisePlayground-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PromisePlayground/Pods-PromisePlayground-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PromisePlayground/Pods-PromisePlayground-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35A37E220BAF3A2272BA6F1C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PromisePlayground-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		08B3D7E422F3C896006A719F /* Sources */ = {
@@ -217,7 +285,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -272,7 +340,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -284,6 +352,7 @@
 		};
 		08B3D7FE22F3C899006A719F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8AC3CD54CE567A6419E5749 /* Pods-PromisePlayground.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +371,7 @@
 		};
 		08B3D7FF22F3C899006A719F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59DD6EC01D6D2573424D4FC8 /* Pods-PromisePlayground.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
