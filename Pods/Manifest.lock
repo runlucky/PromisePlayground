@@ -1,16 +1,20 @@
 PODS:
   - PromiseKit/CorePromise (4.5.2)
+  - Swinject (2.7.1)
 
 DEPENDENCIES:
   - PromiseKit/CorePromise (~> 4.5)
+  - Swinject
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - PromiseKit
+    - Swinject
 
 SPEC CHECKSUMS:
   PromiseKit: 743e497a5f505a470d3bbbf4ce0663c1268af0a4
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: 60ab56501aab41990f31571bfb61130ec2f913ec
+PODFILE CHECKSUM: b5e01d5a2b7fcb8d1d83cb3a3154e8b4c43e753c
 
 COCOAPODS: 1.7.2
