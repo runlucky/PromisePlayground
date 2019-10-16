@@ -161,10 +161,16 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework"
 fi

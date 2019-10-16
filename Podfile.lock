@@ -1,20 +1,36 @@
 PODS:
+  - FLAnimatedImage (1.0.12)
+  - PINCache (2.3)
+  - PINRemoteImage (2.1.4):
+    - PINRemoteImage/FLAnimatedImage (= 2.1.4)
+  - PINRemoteImage/Core (2.1.4):
+    - PINCache (>= 2.1)
+  - PINRemoteImage/FLAnimatedImage (2.1.4):
+    - FLAnimatedImage (>= 1.0)
+    - PINRemoteImage/Core
   - PromiseKit/CorePromise (4.5.2)
   - Swinject (2.7.1)
 
 DEPENDENCIES:
+  - PINRemoteImage
   - PromiseKit/CorePromise (~> 4.5)
   - Swinject
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
+    - FLAnimatedImage
+    - PINCache
+    - PINRemoteImage
     - PromiseKit
     - Swinject
 
 SPEC CHECKSUMS:
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
+  PINRemoteImage: 4ac4011c5caefd6befd99758e09becede05d3226
   PromiseKit: 743e497a5f505a470d3bbbf4ce0663c1268af0a4
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: b5e01d5a2b7fcb8d1d83cb3a3154e8b4c43e753c
+PODFILE CHECKSUM: 8b88a3a8dfb2ffdba9603e93ab20ee3fac1f75a3
 
-COCOAPODS: 1.7.2
+COCOAPODS: 1.8.3

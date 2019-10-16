@@ -8,5 +8,5 @@ target 'PromisePlayground' do
   # Pods for PromisePlayground
   pod 'PromiseKit/CorePromise', '~> 4.5'
   pod 'Swinject'
-
+  pod 'PINRemoteImage'
 end

@@ -1,3 +1,6 @@
 ${PODS_ROOT}/Target Support Files/Pods-PromisePlayground/Pods-PromisePlayground-frameworks.sh
+${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework
+${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework
+${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework
 ${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework
 ${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework
